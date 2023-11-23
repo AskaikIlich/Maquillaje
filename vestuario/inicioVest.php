@@ -88,7 +88,7 @@
                                     <div class="col-md-3">
                                        <a href="../Public/chambista.php">
                                        <div id="hover_chang" class="service_box">
-                                          <i><img src="../images/chamba.png" alt="#"/></i>
+                                          <i><img src="../images/empleado.png" alt="#"/></i>
                                           <h3>Chambista</h3>
                                        </div>
                                     </div>

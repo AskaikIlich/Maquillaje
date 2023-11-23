@@ -109,3 +109,34 @@
 
 <!-- FinModal Agregar(Detalle)-->
 
+eliminar
+
+<!-- Inicio Eliminar(Detalle)-->
+<div class="modal fade" id="eliminar-tarea" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="exampleModalLabel">Estas Seguro?</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="../control/detalle.php" method="post">
+        <input type="hidden" value="3" name="accion">
+        <input type="hidden" name="chambista" id="chambista">
+        <input type="hidden" name="FK_asignada"  id="eliminar"> 
+        <p>Los registros seran elminados permanentemente</p>             
+          
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- FIN Eliminar(Detalle)-->

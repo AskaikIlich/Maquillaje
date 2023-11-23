@@ -267,7 +267,7 @@ $(document).ready(function() {
         { "data": "statusTarea" },
         { "data": "significado" },
         {"data":null,
-        "defaultContent":'<center><button type="button" class="btn btn-primary editar " data-toggle="modal" data-target="#editar-tarea"><i class="fa-solid fa-square-pen"></i></button>&nbsp;<button class="btn btn-danger btn-elminar" data-bs-toggle="modal" data-bs-target="#eliminar"><i class="fa-solid fa-trash-can"></i></button></center>',
+        "defaultContent":'<center><button type="button" class="btn btn-primary editar " data-toggle="modal" data-target="#editar-tarea"><i class="fa-solid fa-square-pen"></i></button>&nbsp;<button class="btn btn-danger elim" data-toggle="modal" data-target="#eliminar-tarea"><i class="fa-solid fa-trash-can"></i></button></center>',
         }      
      
 ]
@@ -278,6 +278,7 @@ $(document).ready(function() {
     }, 1000 );
 
       editar("#detalles tbody",table);
+      eliminar("#detalles tbody",table);
 
       let eval= document.querySelector('#significado');
       let statusTarea= document.querySelector('#status');
@@ -353,6 +354,16 @@ $(document).ready(function() {
     var chamb=$("#chamb").val(data.ID_chambista)
 
      });}
+
+     //Cargar id Modal Eliminar
+      var eliminar =  function(tbody,table){
+    
+        $(tbody).on("click","button.elim",function(){
+        var data = table.row($(this).parents("tr")).data();
+        var id = $("#eliminar").val(data.ID_tareasAsigna)
+        var chamb = $("#chambista").val(data.ID_chambista)
+       
+         });}
 
       
 
