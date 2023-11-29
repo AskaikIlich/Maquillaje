@@ -6,7 +6,7 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-                     <br><h2> INICIO 
+                     <br><h2> INICIOO
                         <?php // echo $_SESSION['userLogeado']; ?></h2>
                   </div>
                </div>
