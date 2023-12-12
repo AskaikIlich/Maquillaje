@@ -1,11 +1,11 @@
 <?php
-require_once ('../clases/chambista.php');
+require_once ('../clases/persona.php');
 
-$valor= $_POST['accion'];
+
 
 switch($valor){
     case null:
-    $consulta = new chambista();
+    $consulta = new Persona();
     $imprime= $consulta->consultar();
     break;
 
