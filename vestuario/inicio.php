@@ -15,7 +15,7 @@
             
             <div class="row">
                <div class="col-md-3">
-                  <a href="ingresarArticulos.php">
+                  <a href="ingresar.php">
                   <div id="hover_chang" class="service_box">
                      <i><img src="../images/guardarropa.png"  alt="#"/></i>
                      <h3>Ingresar Articulos</h3>
@@ -46,14 +46,6 @@
                </div>
 
                <div class="col-md-3">
-                  <a href="lavanderia.php">
-                  <div id="hover_chang" class="service_box">
-                     <i><img src="../images/lavanderia.png"  alt="#"/></i>
-                     <h3>Lavanderia</h3>
-                  </div>
-                  </a>
-               </div>
-               <div class="col-md-3">
                   <a href="empleados.php">
                   <div id="hover_chang" class="service_box">
                      <i><img src="../images/empleado.png" alt="#"/></i>
@@ -69,7 +61,7 @@
                   </div>
                </div>
 
-               <div class="col-md-3">                  
+               <!-- <div class="col-md-3">                  
                   <div id="hoverchang" class="servicebox">
                      <div class="card-body">
                         <h3>Administrar</h3>
@@ -81,18 +73,31 @@
                         <a href="division.php" class="card-link"><p>Divisiones y gerencias</p></a>
                      </div>
                   </div>
-               </div>      <?php
+               </div>       --> <?php
                            // $usuario = $_SESSION['usuario'];
                            //       if ($usuario['FK_tipoUsuario'] == 2 && $usuario['usuario'] == 'Hemi' || $usuario['usuario'] == 'desarrollo' ) {
                                     ?>
+                                    <?php 
+                                 if ($nombreUsuario['ID_tipoUs']==6 or $nombreUsuario['ID_tipoUs']==1)
+                                 {
+                                 ?>
                                     <div class="col-md-3">
                                        <a href="../Public/chambista.php">
                                        <div id="hover_chang" class="service_box">
-                                          <i><img src="../images/empleado.png" alt="#"/></i>
+                                          <i><img src="../images/chamba.png" alt="#"/></i>
                                           <h3>Chambista</h3>
                                        </div>
                                     </div>
+                                 
+                                    <div class="col-md-3">
+                                       <a href="../vestuario/persona.php">
+                                       <div id="hover_chang" class="service_box">
+                                          <i><img src="../images/chamba.png" alt="#"/></i>
+                                          <h3>Personas</h3>
+                                       </div>
+                                    </div>
                                     <?php
+                                    }
                                  // } else {
                                  //} ?>
             </div>

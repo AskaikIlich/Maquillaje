@@ -34,7 +34,7 @@
         </div>
       <!-- end loader -->
       <!-- header -->
-        <header>
+      <header>
             <div class="header">
                 <div class="container">
                     <div class="row">

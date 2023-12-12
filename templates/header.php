@@ -58,6 +58,10 @@
                                  ?>
                               </li>                              
                               <li class="nav-item">
+                                 <!-- <a class="nav-link" href="javascript:history.back()"> Volver Atrás</a> -->
+                                 <a class="nav-link" href="inicio.php">Volver al Menú</a>
+                              </li>
+                              <li class="nav-item">
                                  <a class="nav-link" href="registro.php"> Nuevo Registro</a>
                               </li>
                               <li class="nav-item dropdown">
@@ -82,7 +86,7 @@
                      <div class="full">
                         <div class="center-desk">
                            <div class="logo">
-                              <a href="home.php"><img src="../images/logo.png" alt="#" /></a>
+                              <a href="../inicio/inicio.php"><img src="../images/logo.png" alt="#" /></a>
                            </div>
                         </div>
                      </div>

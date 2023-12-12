@@ -30,22 +30,13 @@ class Usuario {
         }
     }
 
-    // public function getDatos($usuario) {
-    //     $sql = 'SELECT * FROM "USUARIO" WHERE usuario = :este ';
-    //     $query = $this->conn->prepare($sql);
-    //     $query->bindParam(':este', $usuario);
-    //     $query->execute();
-
-    //     $this->sqlData = $query->fetch(PDO::FETCH_ASSOC);
-    //     $todo = $this->sqlData;
-    //     return $todo;
-    // }
     
     public function obtenerNombreApellido($usuario) {
         try {
-            $query = 'SELECT * 
-                      FROM "USUARIO" u 
-                    JOIN "PERSONA" p ON u."FK_persona" = p."ID_persona" 
+            $query = 'SELECT *  FROM "USUARIO" u 
+            JOIN "PERSONA" p ON u."FK_persona" = p."ID_persona"
+            join "TIPO_US" ON "FK_tipoUs" = "ID_tipoUs" 
+            JOIN "STATUS_US" ON "FK_status"="ID_statusUs"
                     WHERE u.usuario = :usuario';
 
             $stmt = $this->conn->prepare($query);
@@ -66,13 +57,3 @@ class Usuario {
 
 }
 ?>
-<!-- 
-SELECT * FROM "USUARIO" u 
-JOIN PERSONA ON USUARIO.FK_persona = PERSONA.ID_persona 
-WHERE USUARIO.usuario = "hemi"
-
-
-SELECT p.nombre, p.apellido 
-FROM "USUARIO" u 
-JOIN "PERSONA" p ON u."FK_persona" = p."ID_persona" 
-WHERE u.usuario = 'hemi'; -->
