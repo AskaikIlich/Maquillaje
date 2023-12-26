@@ -19,8 +19,8 @@
             // }
             ?>
             <div class="row">
-               <div class="col-md-3"> </div> 
-               <div class="col-md-3">
+               <!-- <div class="col-md-3"> </div>  -->
+               <div class="col-md-4">
                   <a href="../vestuario/inicio.php">
                   <div id="hover_chang" class="service_box">
                      <i><img src="../images/ropa.png"  alt="#"/></i>
@@ -28,12 +28,23 @@
                   </div>
                   </a>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="maquillaje_box">                        
                     <a href="../maquillaje/inicio.php">
                         <div id="hover_chang" class="service_box">
                             <i><img src="../images/adminMA.png" alt="#"/></i>
                             <h3>Maquillaje</h3>
+                        </div>
+                    </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="programa_box">                        
+                    <a href="../Programas/inicio.php">
+                        <div id="hover_chang" class="service_box">
+                            <i><img src="../images/adminMA.png" alt="#"/></i>
+                            <h3>Programas</h3>
                         </div>
                     </a>
                     </div>

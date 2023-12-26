@@ -1,7 +1,8 @@
 <!-- MODAL --> 
 <!-- modal para editar -->
         <div class = "main_form">
-            <div class="modal fade" id="modalArticulo" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal fade" id="modalArticulo" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true"  data-backdrop="static" data-keyboard="false">
+            
                <div class="modal-dialog" role="document">
                   <div class="modal-content">
 
@@ -61,3 +62,6 @@
             </div>
          </div>
       
+<!-- <script>
+   $('#modalArticulo').modal({backdrop: 'static', keyboard: false})
+</script> -->

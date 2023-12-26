@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var table = $('#articulos').DataTable({
+    var table = $('#programacion').DataTable({
         autoWidth: false,
         language: {
             "processing": "Procesando...",
@@ -243,35 +243,36 @@ $(document).ready(function() {
                 "renameTitle": "Cambiar Nombre Estado"
             }
         },"ajax": {
-            "url":"../controlVestuario/articuloTabla.php",
+            "url":"../controlProgramas/tablaProgramacion.php",
             "method":"Get",
         },
         "columns": [
-            { "data": "ID_articulo" },
-            { "data": "descripcion" },
-            { "data": "color" },
-            { "data": "detalle" },
-            { "data": "statusArt"},
+            { "data": "ID_programacion" },
+            { "data": "programa" },
+            { "data": "horaPrograma" },
+            { "data": "fechaPrograma" },
             { "data":null,
-            "defaultContent":'<button type="button" class="btn modalArticulo" data-toggle="modal" data-target="#modalArticulo"><img src="../images/lapiz.png" alt="Modificar"/></button>',
-            }],"order": [[ 0, "desc" ]]
-
+            "defaultContent":'<button type="button" class="btn modalPautas" data-toggle="modal" data-target="#modalPautas"><img src="../images/aprobar.png" alt="Modificar"/></button>',
+            }
+        ],
+        columnDefs: [ {
+            targets: 3,
+            render: DataTable.render.moment('YYYY-MM-DD', 'DD-MM-YYYY' )
+          } ]
+            // "order": [[ 1, "desc" ]]
     });
     setInterval( function () {
         table.ajax.reload();
         }, 5000 ); 
-    modArt("#articulos tbody",table);
-
-        // le faltaba el "var table" para que funcione la recarga de la tabla
+    definirP("#programacion tbody",table);
 });
-//ask    Para MOSTRAR EN EL MODAL
-var modArt = function(tbody,table){
-    $(tbody).on("click","button.modalArticulo",function(){
+
+var definirP = function(tbody,table){
+    $(tbody).on("click","button.modalPautas",function(){
         var data = table.row($(this).parents("tr")).data();
-        var varId  = $("#ID_articulo"). val(data.ID_articulo),
-        varNom     = $("#Mdescripcion").val(data.FK_descripcion),
-        varCol     = $("#Mcolor").      val(data.FK_color),
-        varCol     = $("#Mdetalles").   val(data.FK_detalle),
-        varEst     = $("#Mestatus").    val(data.FK_statusArt);
+        var varId  = $("#ID_programacion"). val(data.ID_programacion),
+        varNom     = $("#programa").        val(data.programa),
+        varCol     = $("#horaPrograma").    val(data.horaPrograma),
+        varCol     = $("#fechaPrograma").   val(data.fechaPrograma)
     });
 }

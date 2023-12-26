@@ -67,7 +67,7 @@ include("../controlVestuario/articuloControl.php");
                            <th>Color</th>
                            <th>Detalles</th>
                            <th>Estatus</th>
-                           <th>Acciones</th>
+                           <th> </th>
                         </tr>
                      </thead>
                      <tbody>                        
@@ -75,6 +75,8 @@ include("../controlVestuario/articuloControl.php");
                      </tbody>
                   </table>
                </div>
+               
+
                   <?php  include("modal\modalModArticulos.php"); ?>                  
             </div>
          </div>
@@ -92,3 +94,4 @@ include("../controlVestuario/articuloControl.php");
 <script src="../vendor/datatables/jquery.dataTables.min.js"></script>
 <script src="../vendor/datatables/dataTables.bootstrap4.min.js"></script>
 <script src="../js/datatables/datatables-articulos.js"></script>
+

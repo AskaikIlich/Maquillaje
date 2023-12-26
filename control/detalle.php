@@ -4,7 +4,11 @@ require_once ('../clases/tarea.php');
 if ($_POST) {
     $valor= $_POST['accion'];
 } else {
+<<<<<<< Updated upstream
     $valor=0;
+=======
+    $valor= 0;
+>>>>>>> Stashed changes
 }
 
 switch($valor){

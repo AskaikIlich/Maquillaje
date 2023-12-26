@@ -151,6 +151,12 @@ a,
      transition: all .3s ease-in-out;
 }
 
+button img {
+     width: 20px;
+     height: 20px;
+     color: #fff;
+}
+
 img {
      max-width: 100%;
      height: auto;
@@ -398,6 +404,18 @@ ul.email li a {
      height: 90px;     
 }
 
+.headerPro {
+     width: 100%;
+     padding: 20px 30px;
+     background: url(../images/color-franja-azul.png);
+     background-repeat: no-repeat;
+     background-size: 100% 100%;
+     position: fixed;
+     z-index: 900;
+     opacity: .80;
+     height: 90px;
+}
+
 
 
 .logo a {
@@ -636,6 +654,13 @@ ul.email li a {
 
 .maquillaje_box #hover_chang:hover.service_box {
      background: #ee9797;
+     transition: ease-in all 0.5s;
+     border-radius: 20px;
+     cursor: pointer;
+}
+
+.programa_box #hover_chang:hover.service_box {
+     background: #97d2ee;
      transition: ease-in all 0.5s;
      border-radius: 20px;
      cursor: pointer;
@@ -881,7 +906,7 @@ ul.email li a {
      padding: 90px 0;
 }
 .login .card {
-     background-color: rgba(221, 221, 221, 0.329);
+     background-color: rgba(221, 221, 221, 0.705);
 }
 
 .login .card-header {
@@ -889,6 +914,11 @@ ul.email li a {
      line-height: 22px;
      text-align: center;
      font-weight: 20px;
+     color: #3d3b3b;
+}
+.login .card-body {
+     
+     color: #3d3b3b;
 }
 /* tabla ingresar articulos */
 
@@ -1135,6 +1165,13 @@ modal-dialog{
 
 .footer {
      background: #b37e3a;
+     /* margin-top: auto; */
+     padding: 20px 0px;
+     padding-bottom: 20px
+}
+
+.footerPro {
+     background: url(../images/color-franja-azul.png);
      /* margin-top: auto; */
      padding: 20px 0px;
      padding-bottom: 20px

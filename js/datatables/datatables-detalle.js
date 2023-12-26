@@ -275,7 +275,7 @@ $(document).ready(function() {
       });
       setInterval( function () {
         table.ajax.reload(null,false);
-    }, 1000 );
+    }, 8000 );
 
       editar("#detalles tbody",table);
 
