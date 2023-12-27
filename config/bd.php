@@ -1,7 +1,7 @@
 <?php
 class Database {
     private $host = 'localhost';
-    private $db_name = 'BDVestuario1611';
+    private $db_name = 'bdVestuario';
     private $username = 'postgres';
     private $password = 'he290615';
     private $conn;
