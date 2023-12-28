@@ -77,7 +77,7 @@
                            // $usuario = $_SESSION['usuario'];
                            //       if ($usuario['FK_tipoUsuario'] == 2 && $usuario['usuario'] == 'Hemi' || $usuario['usuario'] == 'desarrollo' ) {
                                     ?>
-                                    <?php 
+                             <?php 
                                  if ($nombreUsuario['ID_tipoUs']==6 or $nombreUsuario['ID_tipoUs']==1)
                                  {
                                  ?>
@@ -90,7 +90,7 @@
                                     </div>
                                  
                                     <div class="col-md-3">
-                                       <a href="../vestuario/persona.php">
+                                       <a href="../Public/persona.php">
                                        <div id="hover_chang" class="service_box">
                                           <i><img src="../images/chamba.png" alt="#"/></i>
                                           <h3>Personas</h3>

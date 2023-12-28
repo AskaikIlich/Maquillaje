@@ -3,8 +3,9 @@ require_once ('../clases/chambista.php');
 
 $valor= $_POST['accion'];
 
+
 switch($valor){
-    case null:
+    case 0:
     $consulta = new chambista();
     $imprime= $consulta->consultar();
     break;

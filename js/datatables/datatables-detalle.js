@@ -267,7 +267,7 @@ $(document).ready(function() {
         { "data": "statusTarea" },
         { "data": "significado" },
         {"data":null,
-        "defaultContent":'<center><button type="button" class="btn btn-primary editar " data-toggle="modal" data-target="#editar-tarea"><i class="fa-solid fa-square-pen"></i></button>&nbsp;<button class="btn btn-danger elim" data-toggle="modal" data-target="#eliminar-tarea"><i class="fa-solid fa-trash-can"></i></button></center>',
+        "defaultContent":'<center><button type="button" class="btn btn-primary editar " data-toggle="modal" data-target="#editar-tarea"><i class="fa-solid fa-square-pen"></i></button>&nbsp;<button class="btn btn-danger btn-elminar" data-bs-toggle="modal" data-bs-target="#eliminar"><i class="fa-solid fa-trash-can"></i></button></center>',
         }      
      
 ]
@@ -275,17 +275,15 @@ $(document).ready(function() {
       });
       setInterval( function () {
         table.ajax.reload(null,false);
-    }, 1000 );
+    }, 8000 );
 
       editar("#detalles tbody",table);
-      eliminar("#detalles tbody",table);
 
       let eval= document.querySelector('#significado');
       let statusTarea= document.querySelector('#status');
-      let tareas= document.querySelector('#tareas');
 
 
-        // Cargar Select Editar
+        // Cargar Select
      function evaluacion(){
         $.ajax({
             type:"GET",
@@ -302,6 +300,7 @@ $(document).ready(function() {
     }
     evaluacion();
 
+
     function status(){
         $.ajax({
             type:"GET",
@@ -317,24 +316,7 @@ $(document).ready(function() {
         })
     }
     status();
- //Cargar Select Agregar
 
- function tarea(){
-    $.ajax({
-        type:"GET",
-        url:"../control/tarea.php",
-        success: function(response){
-            const get_tarea= JSON.parse(response)
-            let template= '<option class="form-control" selected disabled> -- Tarea -- </option>'
-            get_tarea.forEach(tarea =>{
-                template += `<option value="${tarea.Id}">${tarea.tareas}</option>`
-            })
-            tareas.innerHTML= template;
-        }
-    })
-
- }
- tarea();
 
     
   });
@@ -355,21 +337,4 @@ $(document).ready(function() {
 
      });}
 
-     //Cargar id Modal Eliminar
-      var eliminar =  function(tbody,table){
-    
-        $(tbody).on("click","button.elim",function(){
-        var data = table.row($(this).parents("tr")).data();
-        var id = $("#eliminar").val(data.ID_tareasAsigna)
-        var chamb = $("#chambista").val(data.ID_chambista)
-       
-         });}
-
       
-
-  
-      
-
-
-
-   

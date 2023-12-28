@@ -1,6 +1,6 @@
 // Call the dataTables jQuery plugin
 $(document).ready(function() {
-    var table= $('#chambista').DataTable({
+    $('#chambista').DataTable({
       autoWidth: false,
       language: {
           "processing": "Procesando...",
@@ -251,76 +251,16 @@ $(document).ready(function() {
       "columns": [
         { "data": "nombre" },
         { "data": "apellido" },
+        { "data": "division" },
         { "data": "ID_chambista",
           "render": function ( data, type, row, meta ) {
             return '<a href="detalle.php?id='+data+'">'+data+' </a>';
-        }},
-        { "data": "fechaIngreso" },
-        { "data": "fechaCulminacion" },
-        {"data":null,
-        "defaultContent":'<center><button type="button" class="btn btn-primary edit " data-toggle="modal" data-target="#editar-chambista"><i class="fa-solid fa-square-pen"></i></button></center>',
-        }      
-     
+        }}     
 ]
-    
       });
-      setInterval( function () {
-        table.ajax.reload(null,false);
-    }, 1000 );
-     // Ejecutar funcion
-  editar("#chambista tbody",table);
-    
+    //   setInterval( function () {
+    //     table.ajax.reload();
+    //     }, 5000 );    
   });
-  //Variable de control
-  let personas= document.querySelector('#personal');
-  let divisiones =document.querySelector('#division');
+  
 
- 
-
-
-
-  //Cargar Personal a Select de Chambista
-  function cargar_person(){
-    $.ajax({
-        type:"GET",
-        url:"../control/persona_select.php",
-        success: function(response){
-            const get_tarea= JSON.parse(response)
-            let template= '<option class="form-control" selected disabled> -- Persona -- </option>'
-            get_tarea.forEach(personal =>{
-                template += `<option value="${personal.Id}">${personal.persona}</option>`
-            })
-            personas.innerHTML= template;
-        }
-    })
-
- }
- cargar_person();
-  //Cargar Personal a Select de Division
-  function cargar_divi(){
-    $.ajax({
-        type:"GET",
-        url:"../control/division.php",
-        success: function(response){
-            const get_tarea= JSON.parse(response)
-            let template= '<option class="form-control" selected disabled> -- Division -- </option>'
-            get_tarea.forEach(division =>{
-                template += `<option value="${division.Id}">${division.division}</option>`
-            })
-            divisiones.innerHTML= template;
-        }
-    })
-
- }
- cargar_divi();
-
- // Cargar datos Modal Editar
- var editar= function(tbody,table){
-    
-    $(tbody).on("click","button.edit",function(){
-    var data = table.row($(this).parents("tr")).data();
-    var inicio = $("#ingreso").val(data.fechaIngreso)
-    var final = $("#salida").val(data.fechaCulminacion)
-    var id = $("#id_chamb").val(data.ID_chambista)
-    
-     });}

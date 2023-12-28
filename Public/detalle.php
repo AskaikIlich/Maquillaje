@@ -3,7 +3,7 @@
 
 ?>
 <div id="service"  class="service">
-        <br><center> <h1>Listado de Tareas</h1></center>
+         
 
 <div class="container">
     <div class="card-body">

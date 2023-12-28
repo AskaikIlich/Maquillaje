@@ -32,7 +32,7 @@
     </div>
 </div>
 <?php include("../templates/footer.php"); ?>
-<?php include("../public/modal.php"); ?>
+<?php include("modal.php"); ?>
 <!-- Page datatables scripts -->
 <script src="../vendor/datatables/jquery.dataTables.min.js"></script>
 <script src="../vendor/datatables/dataTables.bootstrap4.min.js"></script>
