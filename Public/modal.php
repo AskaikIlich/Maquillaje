@@ -140,3 +140,84 @@ eliminar
 
 
 <!-- FIN Eliminar(Detalle)-->
+<!-- Modal Agregar(Chambista)-->
+<div class="modal fade" id="agregar-chambista" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="exampleModalLabel">Agregar</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="../control/chambista.php" method="post">
+          <input type="hidden" name="accion" value="1">
+        <div class="form-group">
+            <label for="message-text" class="col-form-label">Persona:</label>           
+            <select type="text" class="form-control" name="personal" id="personal"> 
+                </select>
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Division:</label>           
+            <select type="text" class="form-control" name="division" id="division"> 
+                </select>
+          </div>
+         
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Fecha de Ingreso:</label>           
+            <input class="form-control" name="ingreso" type="date">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Fecha de Culminación:</label>           
+            <input class="form-control"  name="salida" type="date">
+          </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FinModal Agregar(Chambista)-->
+
+<!-- Inicio Editar(Chambista)-->
+<div class="modal fade" id="editar-chambista" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="exampleModalLabel">Editar</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="../control/chambista.php" method="post">
+          <input type="hidden" name="accion" value="2">
+          <input type="hidden"name="id_chamb" id="id_chamb">
+        <div class="form-group">
+            <label for="message-text" class="col-form-label">Fecha de Ingreso:</label>           
+            <input class="form-control" id="ingreso" name="ingreso" type="date">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Fecha de Culminación:</label>           
+            <input class="form-control" id="salida" name="salida" type="date">
+          </div>
+          
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- FIN Editar(Chambista)-->

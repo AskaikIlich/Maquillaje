@@ -77,6 +77,10 @@
                            // $usuario = $_SESSION['usuario'];
                            //       if ($usuario['FK_tipoUsuario'] == 2 && $usuario['usuario'] == 'Hemi' || $usuario['usuario'] == 'desarrollo' ) {
                                     ?>
+                                    <?php 
+                                 if ($nombreUsuario['ID_tipoUs']==6 or $nombreUsuario['ID_tipoUs']==1)
+                                 {
+                                 ?>
                                     <div class="col-md-3">
                                        <a href="../Public/chambista.php">
                                        <div id="hover_chang" class="service_box">
@@ -84,7 +88,16 @@
                                           <h3>Chambista</h3>
                                        </div>
                                     </div>
+                                 
+                                    <div class="col-md-3">
+                                       <a href="../vestuario/persona.php">
+                                       <div id="hover_chang" class="service_box">
+                                          <i><img src="../images/chamba.png" alt="#"/></i>
+                                          <h3>Personas</h3>
+                                       </div>
+                                    </div>
                                     <?php
+                                    }
                                  // } else {
                                  //} ?>
             </div>
