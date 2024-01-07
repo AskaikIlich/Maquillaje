@@ -14,6 +14,8 @@
                             <th>Cedula</th>
                             <th>Telefono</th>
                             <th>Correo</th>
+                            <th>Acciones</th>
+
                          </tr>
                         </thead>
                         <tfoot>
@@ -23,6 +25,7 @@
                                 <th>Cedula</th>
                                 <th>Telefono</th>
                                 <th>Correo</th>
+                                <th>Acciones</th>
                             </tr>
                         </tfoot>
                     <tbody>
@@ -32,8 +35,11 @@
     </div>
 </div>
 <?php include("../templates/footer.php"); ?>
-<?php include("modal.php"); ?>
+<?php include("modal_Persona.php"); ?>
 <!-- Page datatables scripts -->
 <script src="../vendor/datatables/jquery.dataTables.min.js"></script>
 <script src="../vendor/datatables/dataTables.bootstrap4.min.js"></script>
 <script src="../js/datatables/datatables-persona.js"></script>
+<!-- Page Sweet Alert scripts -->
+<script src="../vendor/sweet/dist/sweetalert2.all.min.js"></script>
+<script src="../js/alerts.js"></script>

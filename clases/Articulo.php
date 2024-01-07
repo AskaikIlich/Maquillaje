@@ -25,10 +25,13 @@ class Articulo {
         $insertando = $insert->execute($arrData);
     }
 
-    public function getProgramacionTabla(){
+    public function getArticulosTabla(){
         try {
-            $query = 'SELECT * FROM public."PROGRAMACION"
-            INNER JOIN public."PROGRAMA" ON "FK_programa" = "ID_programa"';
+            $query = 'SELECT * FROM public."ARTICULO"
+            INNER JOIN public."DESCRIPCION" ON "FK_descripcion" = "ID_descripcion"
+                  JOIN public."COLOR"   ON "FK_color"   = "ID_color"
+                  JOIN public."DETALLE" ON "FK_detalle" = "ID_detalle"
+                  JOIN public."STATUS_ARTICULO" ON "FK_statusArt" = "ID_statusArt"';
             $stmt = $this->conn->prepare($query);
             $stmt->execute();
             while( $mostrar=$stmt->fetch(PDO::FETCH_ASSOC))

@@ -253,20 +253,45 @@ $(document).ready(function() {
         { "data": "apellido" },
         { "data": "cedula"},
         { "data": "telefono"},
+        {"data":"correo"},
         {"data":null,
-        "defaultContent":'<center><button type="button" class="btn btn-primary edit " data-toggle="modal" data-target="#editar-chambista"><i class="fa-solid fa-square-pen"></i></button></center>',
+        "defaultContent":'<center><button type="button" class="btn btn-primary edit " data-toggle="modal" data-target="#editar-persona"><i class="fa-solid fa-square-pen"></i></button>&nbsp;<button class="btn btn-danger delate" data-toggle="modal" data-target="#eliminar-persona"><i class="fa-solid fa-trash-can"></i></button></center>',
         }      
      
 ]
+
+
     
       });
       setInterval( function () {
         table.ajax.reload(null,false);
     }, 1000 );
-     // Ejecutar funcion
-  //editar("#chambista tbody",table);
+    //Variables Ejecutar funcion
+    eliminar("#persona tbody",table);
+    editar("#persona tbody",table);
     
   });
+
+   //Cargar id Modal Eliminar
+   var eliminar =  function(tbody,table){
+    $(tbody).on("click","button.delate",function(){
+    var data = table.row($(this).parents("tr")).data();
+    var id = $("#eliminar").val(data.ID_persona)
+   
+     });}
+
+     //Cargar Modal Editar
+   var editar =  function(tbody,table){
+    $(tbody).on("click","button.edit",function(){
+    var data = table.row($(this).parents("tr")).data();
+    var id = $("#id-per").val(data.ID_persona);
+    var nombre = $("#nombre").val(data.nombre);
+    var apellido = $("#apellido").val(data.apellido);
+    var cedula = $("#cedula").val(data.cedula);
+    var telefono = $("#telef").val(data.telefono);
+    var correo = $("#correo").val(data.correo);
+   
+     });}
  
 
  

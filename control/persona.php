@@ -1,35 +1,54 @@
 <?php
 require_once ('../clases/persona.php');
 
-
+$valor=$_POST['accion'];
+if($valor== null){
+    $valor=0;
+}
 
 switch($valor){
-    case null:
+    case 0:
     $consulta = new Persona();
     $imprime= $consulta->consultar();
     break;
 
-
     case 1:
-    $inicio=$_POST['ingreso'];
-    $final=$_POST['salida'];
-    $division=$_POST['division'];
-    $personal=$_POST['personal'];
-        $inserta = new chambista();
-        $insertar= $inserta->inserta($inicio,$final,$division,$personal);
+    $nombre=$_POST['nombre'];
+    $apellido = $_POST['apellido'];
+    $cedula= $_POST['cedula'];
+    $telef = $_POST['telef'];
+    $correo = $_POST['correo'];
+        $inserta = new Persona();
+        $verificar=$inserta->existencia($cedula);
+        if($verificar==0){
+        
+        $insertar= $inserta->insertar($nombre,$apellido,$cedula,$telef,$correo);
+        
+        }else{
+            header("Location:../Public/persona.php?error=1");
+            
+        }
+
         break;
 
-
-
-
         case 2:
-            $id=$_POST['id_chamb'];
-            $inicio=$_POST['ingreso'];
-            $final=$_POST['salida'];
-            $edita = new chambista();
-            $editar= $edita->edicion($inicio,$final,$id);
+      $id=$_POST['id'];    
+      $nombre=$_POST['nombre'];
+      $apellido = $_POST['apellido'];
+      $cedula= $_POST['cedula'];
+      $telef = $_POST['telef'];
+      $correo = $_POST['correo'];
+      $edicion= new Persona();
+      $editar= $edicion->editar($nombre,$apellido,$cedula,$telef,$correo,$id);
 
-        break;    
+        break;  
+        case 3:
+            $idpersona= $_POST['id_person'];
+            $eliminar = new Persona();
+            $elim=$eliminar->eliminar($idpersona);
+            
+            
+        break;  
 
     }
 

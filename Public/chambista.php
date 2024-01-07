@@ -2,6 +2,9 @@
  include("../templates/header.php");
 ?>
 <div id="service"  class="service">
+  <br>  <center><h1>Personal Chambista</h1> </center><br><br>
+
+  <center><button class="btn btn-success boton_agregar"data-toggle="modal" data-target="#agregar-chambista">Crear</button></center>
          
 
 <div class="container">
@@ -12,8 +15,10 @@
                                         <tr>
                                             <th>Nombre</th>
                                             <th>Apellido</th>
-                                            <th>Division</th>
-                                            <th>Cod.Chamba</th>                                         
+                                            <th>Cod.Chamba</th>
+                                            <th>Fecha Ingreso</th>
+                                            <th>Fecha Culminación</th>
+                                            <th>Acciones</th>                                           
 
                                         </tr>
                                     </thead>
@@ -21,12 +26,10 @@
                                         <tr>
                                             <th>Nombre</th>
                                             <th>Apellido</th>
-                                            <th>Division</th>
-                                            <th>Cod.Chamba</th>    
-
-                                           
-                                           
-
+                                            <th>Cod.Chamba</th>
+                                            <th>Fecha Ingreso</th>
+                                            <th>Fecha Culminación</th> 
+                                            <th>Acciones</th>               
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -43,7 +46,9 @@
 </div>
           
       </div>
-<?php include("../templates/footer.php"); ?>
+<?php include("../templates/footer.php"); 
+include("modal.php")
+?>
 
 <!-- Page datatables scripts -->
 <script src="../vendor/datatables/jquery.dataTables.min.js"></script>

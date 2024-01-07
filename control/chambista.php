@@ -5,7 +5,7 @@ $valor= $_POST['accion'];
 
 
 switch($valor){
-    case 0:
+    case null:
     $consulta = new chambista();
     $imprime= $consulta->consultar();
     break;

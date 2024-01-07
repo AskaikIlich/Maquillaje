@@ -51,7 +51,7 @@
           </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="submit" class="btn btn-primary">Save changes</button>
         </form>
       </div>
@@ -74,16 +74,23 @@
       </div>
       <div class="modal-body">
         <form action="../control/detalle.php" method="post">
-        <input type="text" value="1" name="accion">
+        <input type="hidden" value="1" name="accion">
         <input type="hidden" name="chamb" value="<?php echo $_GET['id']?>" id="chamb">
         <div class="form-group">
             <label for="message-text" class="col-form-label">Tarea:</label>
+            <select type="text" class="form-control" name="tareas" id="tareas"> 
+                </select>
             
           </div>
           <div class="form-group">
             <label for="message-text" class="col-form-label">Descripción:</label>
-            <textarea name="desc" id="" cols="30" rows="10" class="form-control"></textarea>
+            <textarea name="desc" id="" cols="30" rows="2" class="form-control"></textarea>          
           </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Fecha de Inicio:</label>
+            <input type="date" name="fecha_ini" class="form-control">
+          </div>
+          
           
           
       </div>
@@ -102,6 +109,7 @@
 
 <!-- FinModal Agregar(Detalle)-->
 
+eliminar
 
 <!-- Inicio Eliminar(Detalle)-->
 <div class="modal fade" id="eliminar-tarea" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -203,8 +211,8 @@
           
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
         </form>
       </div>
     </div>
@@ -213,4 +221,3 @@
 
 
 <!-- FIN Editar(Chambista)-->
-
